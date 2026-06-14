@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   LineChart, Line, PieChart, Pie, Cell,
@@ -143,7 +144,7 @@ export function Gerente() {
     { icon: <IconFuncionarios />, label: 'Funcionários',  valor: resumo.totalFuncionarios,  cor: '#00c6ff', link: '/equipe' },
     { icon: <IconServicos />, label: 'Serviços',      valor: resumo.totalServicos,      cor: '#38bdf8', link: '/servicos' },
     { icon: <IconProdutos />, label: 'Produtos',      valor: resumo.totalProdutos,      cor: '#D4AF37', link: '/estoque' },
-    { icon: <IconVendas />, label: 'Vendas',        valor: resumo.totalVendas,        cor: '#2ECC71', link: '#' },
+    { icon: <IconVendas />, label: 'Vendas',        valor: resumo.totalVendas,        cor: '#2ECC71', link: '/vendas' },
     { icon: <IconAtendimentos />, label: 'Atendimentos',  valor: resumo.totalAtendimentos,  cor: '#00c6ff', link: '/agenda' },
   ];
 
@@ -261,14 +262,14 @@ export function Gerente() {
 
       <section className={styles.grid}>
         {cards.map((card) => (
-          <a key={card.label} href={card.link} className={styles.card} style={{ '--card-cor': card.cor } as React.CSSProperties}>
+          <Link key={card.label} to={card.link} className={styles.card} style={{ '--card-cor': card.cor } as React.CSSProperties}>
             <div className={styles.cardIcon}>{card.icon}</div>
             <div className={styles.cardInfo}>
               <span className={styles.cardLabel}>{card.label}</span>
               <span className={styles.cardValor}>{card.valor}</span>
             </div>
             <div className={styles.cardGlow}></div>
-          </a>
+          </Link>
         ))}
       </section>
 
@@ -438,26 +439,26 @@ export function Gerente() {
       <section className={styles.atalhos}>
         <h2 className={styles.atalhosTitulo}>Acesso Rápido</h2>
         <div className={styles.atalhoGrid}>
-          <a href="/equipe" className={styles.atalho}>
+          <Link to="/equipe" className={styles.atalho}>
             <IconFuncionarios size={18} />
             Gerenciar Equipe
-          </a>
-          <a href="/cadastro-funcionario" className={styles.atalho}>
+          </Link>
+          <Link to="/cadastro-funcionario" className={styles.atalho}>
             <IconFuncionarios size={18} />
             Cadastrar Funcionário
-          </a>
-          <a href="/estoque" className={styles.atalho}>
+          </Link>
+          <Link to="/estoque" className={styles.atalho}>
             <IconProdutos size={18} />
             Gerenciar Estoque
-          </a>
-          <a href="/agenda" className={styles.atalho}>
+          </Link>
+          <Link to="/agenda" className={styles.atalho}>
             <IconAtendimentos size={18} />
             Ver Agenda
-          </a>
-          <a href="/servicos" className={styles.atalho}>
+          </Link>
+          <Link to="/servicos" className={styles.atalho}>
             <IconServicos size={18} />
             Serviços
-          </a>
+          </Link>
         </div>
       </section>
     </main>

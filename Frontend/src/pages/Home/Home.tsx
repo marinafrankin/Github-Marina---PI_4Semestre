@@ -44,28 +44,6 @@ export function Home() {
           </div>
         </section>
 
-        <section className={styles['services-section']}>
-          <h2 className={styles['section-title']}>Nossos Serviços em Destaque</h2>
-          <div className={styles['section-line']}></div>
-          <div className={styles['services-grid']}>
-            <div className={styles['service-card']}>
-              <h3 className={styles['service-title']}>Corte Feminino</h3>
-              <p className={styles['service-desc']}>Cortes modernos, clássicos e personalizados de acordo com o seu estilo.</p>
-            </div>
-            <div className={styles['service-card']}>
-              <h3 className={styles['service-title']}>Coloração e Luzes</h3>
-              <p className={styles['service-desc']}>Técnicas avançadas de iluminação para destacar a sua beleza.</p>
-            </div>
-            <div className={styles['service-card']}>
-              <h3 className={styles['service-title']}>Estética Facial</h3>
-              <p className={styles['service-desc']}>Limpeza de pele profunda e tratamentos rejuvenescedores.</p>
-            </div>
-            <div className={styles['service-card']}>
-              <h3 className={styles['service-title']}>Manicure & Pedicure</h3>
-              <p className={styles['service-desc']}>Cuidados completos para unhas perfeitas e saudáveis.</p>
-            </div>
-          </div>
-        </section>
 
         <section className={styles['testimonials-section']}>
           <h2 className={styles['section-title']}>O que nossos clientes dizem</h2>

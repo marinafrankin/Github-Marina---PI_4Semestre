@@ -50,7 +50,12 @@ class WhatsAppService {
       console.log('WhatsApp desconectado:', reason);
     });
 
-    await this.client.initialize();
+    try {
+      await this.client.initialize();
+    } catch (err) {
+      this._initializing = false;
+      throw err;
+    }
     this._initializing = false;
   }
 

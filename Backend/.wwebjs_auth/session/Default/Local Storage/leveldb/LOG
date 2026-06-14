@@ -1,3 +1,6 @@
-2026/06/10-11:43:56.557 473c Reusing MANIFEST C:\Users\user\Desktop\SistemaGestao-Novo\Backend\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
-2026/06/10-11:43:56.567 473c Recovering log #13
-2026/06/10-11:43:56.573 473c Reusing old log C:\Users\user\Desktop\SistemaGestao-Novo\Backend\.wwebjs_auth\session\Default\Local Storage\leveldb/000013.log 
+2026/06/10-19:59:37.790 2570 Reusing MANIFEST C:\Users\Marina\Desktop\Github Marina - PI\Backend\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2026/06/10-19:59:37.810 2570 Recovering log #13
+2026/06/10-19:59:37.823 2570 Reusing old log C:\Users\Marina\Desktop\Github Marina - PI\Backend\.wwebjs_auth\session\Default\Local Storage\leveldb/000013.log 
+2026/06/10-20:00:37.837 2624 Level-0 table #17: started
+2026/06/10-20:00:37.857 2624 Level-0 table #17: 17785 bytes OK
+2026/06/10-20:00:37.861 2624 Delete type=0 #13

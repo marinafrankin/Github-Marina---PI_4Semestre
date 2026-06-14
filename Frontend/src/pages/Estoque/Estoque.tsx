@@ -19,6 +19,7 @@ export function Estoque() {
   const [erro, setErro] = useState('');
   const [search, setSearch] = useState('');
   const [filtroQtd, setFiltroQtd] = useState('all');
+  const [filtroCategoria, setFiltroCategoria] = useState('all');
 
   async function loadEstoque() {
     try {
@@ -104,7 +105,8 @@ export function Estoque() {
   const filteredProdutos = produtos.filter(p => {
     const matchSearch = !search || p.nome.toLowerCase().includes(search.toLowerCase());
     const matchQtd = filtroQtd === 'all' || (filtroQtd === 'low' && p.quantidade > 0 && p.quantidade < 10);
-    return matchSearch && matchQtd;
+    const matchCategoria = filtroCategoria === 'all' || p.nome.toLowerCase().includes(filtroCategoria.toLowerCase());
+    return matchSearch && matchQtd && matchCategoria;
   });
 
   const totalDisponiveis = produtos.reduce((acc, p) => acc + p.quantidade, 0);
@@ -155,9 +157,11 @@ export function Estoque() {
                 <span>🔍</span>
                 <input type="text" className={`${styles['modern-input']} ${styles['search-input']}`} placeholder="Pesquisar produto..." value={search} onChange={e => setSearch(e.target.value)} />
               </div>
-              <select className={`${styles['modern-select']} ${styles['filter-select']}`}>
+              <select className={`${styles['modern-select']} ${styles['filter-select']}`} value={filtroCategoria} onChange={e => setFiltroCategoria(e.target.value)}>
                 <option value="all">Todas as Categorias</option>
-                <option value="shampoos">Shampoos</option>
+                <option value="shampoo">Shampoos</option>
+                <option value="condicionador">Condicionadores</option>
+                <option value="tinta">Tintas</option>
               </select>
               <select className={`${styles['modern-select']} ${styles['filter-select']}`} value={filtroQtd} onChange={e => setFiltroQtd(e.target.value)}>
                 <option value="all">Qualquer Quantidade</option>

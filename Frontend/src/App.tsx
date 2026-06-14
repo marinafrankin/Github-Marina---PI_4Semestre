@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/login"       element={<Login />} />
           <Route path="/cadastro"    element={<Cadastro />} />
           <Route path="/servicos"    element={<Servicos />} />
-          <Route path="/agendamento" element={<Agendamento />} />
+          <Route path="/agendamento" element={<ProtectedRoute><Agendamento /></ProtectedRoute>} />
 
           {/* Requerem login */}
           <Route path="/agenda" element={

@@ -83,9 +83,6 @@ export function Navbar() {
         <li><Link to="/"           onClick={close}>Home</Link></li>
 
         {isAuthenticated && (
-          <li><Link to="/servicos"   onClick={close}>Serviços</Link></li>
-        )}
-        {isAuthenticated && (
           <li><Link to="/agendamento" onClick={close}>Agendamento</Link></li>
         )}
 

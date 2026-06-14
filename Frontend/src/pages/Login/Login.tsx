@@ -74,9 +74,7 @@ export function Login() {
             {loading ? 'Entrando...' : 'Entrar'}
           </button>
 
-          <div className={styles['register-link']}>
-            <p>Não tem uma conta? <Link to="/cadastro-funcionario">Cadastre-se</Link></p>
-          </div>
+
         </form>
       </div>
     </div>
